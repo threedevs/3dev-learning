@@ -1,85 +1,74 @@
 @import '../fonts/fontWeight.scss';
 
-.container {
-  padding: 4.5em;
+.PageTitle {
+    margin: 0 0 1.25em;
+    font: $regular 2.25em/1.5 'Quicksand', sans-serif;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-  text-align: center;
+.Section {
+    padding: 4.5em;
+
+    &__row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    /*
+    &__button {
+      padding: 5em;
+    }
+    */
+
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.BookDetails {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 50%;
 
-dt {
-  float: left;
-  clear: left;
-  width: 100px;
-  text-align: right;
-  text-transform: uppercase;
-  font: $regular 1.5em/1.5 'Quicksand', sans-serif;
-}
-dt::after {
-  content: ":";
-}
-dd {
-  margin: 0 0 0 10px;
-  //padding-left: 0.5em;
-  padding: 0 0 70px 2px;
-  font-style: 'Quicksand', sans-serif;
-  font-size: larger;
+    dt {
+      float: left;
+      clear: left;
+      width: 100px;
+      text-align: right;
+      text-transform: uppercase;
+      font: $regular 1.5em/1.5 'Quicksand', sans-serif;
+    }
+
+    dt::after {
+      content: ":";
+    }
+
+    dd {
+      margin: 0 0 0 10px;
+      //padding-left: 0.5em;
+      padding: 0 0 70px 2px;
+      font-style: 'Quicksand', sans-serif;
+      font-size: larger;
+    }
 }
 
-.backBtn {
-  background-color: #db5127;
-  border: none;
-  color: white;
-  padding: 15px 10px;
-  text-align: center;
-  font-size: 24px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 15px;
+.Button {
+
+    border: none;
+    color: white;
+    padding: 0.5em ;
+    text-align: center;
+    font-size: 24px;
+    margin: 4px 2px;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 15px;
+
+    &__back {
+        background-color: #db5127;
+    }
+
+    &__add {
+        background-color: #3e8e41;
+    }
+    
 }
-
-.backBtn:hover {opacity: 1}
-
-.addBtn {
-  background-color: #3e8e41;
-  border: none;
-  color: white;
-  padding: 15px 10px;
-  text-align: center;
-  font-size: 24px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 15px;
-}
-
-.addBtn:hover {opacity: 1}
