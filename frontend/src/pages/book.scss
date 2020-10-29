@@ -14,25 +14,17 @@
         clear: both;
         display: table;
     }
-
-    /*
-    &__button {
-      padding: 5em;
-    }
-    */
-
 }
 
 .BookDetails {
     float: left;
-   // padding: 15px;
     text-align: center;
-    width: 50%;
+    width: 40em;
 
     dt {
       float: left;
       clear: left;
-      width: 100px;
+      width: 5em;
       text-align: right;
       text-transform: uppercase;
       font: $regular 1.5em/1.5 'Quicksand', sans-serif;
@@ -43,26 +35,25 @@
     }
 
     dd {
-      margin: 0 0 0 10px;
+      margin: 0.5em;
       //padding-left: 0.5em;
-      padding: 0 0 70px 2px;
+      padding: 0 0 3.5em 0;
       font-style: 'Quicksand', sans-serif;
       font-size: larger;
     }
 }
 
 .Button {
-
     border: none;
     color: white;
     padding: 0.5em ;
     text-align: center;
-    font-size: 24px;
-    margin: 4px 2px;
+    font-size: 1.5em;
+    margin: 0 2em;
     display: inline-block;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 0.5em;
 
     &__back {
         background-color: #db5127;
@@ -70,6 +61,5 @@
 
     &__add {
         background-color: #3e8e41;
-    }
-    
+    }   
 }
