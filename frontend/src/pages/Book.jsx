@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './book.scss';
 import { useParams } from 'react-router-dom';
-
 import { bookURL } from '../SERVER';
 
 export default function Book() {
@@ -22,7 +21,6 @@ export default function Book() {
 	}, []);
 
 	return (
-		<> 
 			<section className="Section">
 				<div className="Section__row">
 					<h2 className="PageTitle">{book.title}</h2>	
@@ -45,6 +43,5 @@ export default function Book() {
 					<button className="Button Button__add">add to list</button>
 				</div>	
 			</section>
-		</>
 	);
 }
