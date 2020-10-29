@@ -24,7 +24,8 @@ export default function Book() {
 	return (
 		<> 
 			<section className="Section">
-				<div className="Section__row">	
+				<div className="Section__row">
+					<h2 className="PageTitle">{book.title}</h2>	
 					<div className="BookDetails">
 					<img src={`https://picsum.photos/500/500`} alt="book cover" width={500} height={500} />
 					</div>
