@@ -114,6 +114,12 @@ userRouter.get('/s/:search',[param('search').isString({ min: 5, max: 100 })], as
 		if (!users) {
 			throw new Error(`Can not find a user by this username`);
 		}
+		return res.json(users);
+ 	} catch (e) {
+ 		console.error(e);
+ 		return res.sendStatus(500);
+ 	}
+ });
 
 /**
  * @api {get} /api/users Fetch all the available users
