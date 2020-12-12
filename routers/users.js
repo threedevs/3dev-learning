@@ -109,12 +109,12 @@ userRouter.get('/s/:search',[param('search').isString({ min: 5, max: 100 })], as
 			return res.status(400).json({ errors: errors.array() });
 		}
 
-		const users = await userDoc.find({username : req.params.search});
+		const user = await userDoc.find({username : req.params.search});
 
-		if (!users) {
+		if (!user) {
 			throw new Error(`Can not find a user by this username`);
 		}
-		return res.json(users);
+		return res.json(user);
  	} catch (e) {
  		console.error(e);
  		return res.sendStatus(500);
