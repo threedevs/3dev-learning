@@ -3,7 +3,7 @@ const app = require('./../server');
 var assert = require('assert'); 
 
 /**
- * Testing get books
+ * Testing get user by id
  */
 describe('GET /api/users/:id', function () {
     it('check with invalid user id', function (done) {
@@ -16,5 +16,18 @@ describe('GET /api/users/:id', function () {
                 assert.strictEqual(response.status, 400);
                 done();
             });
+    });
+});
+
+/**
+ * Testing get users
+ */
+describe('GET /api/users', function () {
+    it('respond with all the users', function (done) {
+        request(app)
+            .get('/api/users')
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200, done)
     });
 });
